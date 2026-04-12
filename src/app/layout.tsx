@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
-  title: "Finance Dashboard",
-  description: "Track your financial activity",
+  title: "Image Perception Survey",
+  description: "A survey to understand how people perceive images and their attributes.",
 };
 
 export default function RootLayout({
