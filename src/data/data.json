@@ -1,0 +1,217 @@
+[
+  {
+    "id": 1,
+    "question": "What do you think of this image?",
+    "image": "/img/main.png",
+    "starQuestions": [
+      {
+        "id": "SQ1",
+        "question": "Creativity",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ2",
+        "question": "Aesthetic Appeal",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ3",
+        "question": "Professionalism",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ4",
+        "question": "Trustworthiness",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ5",
+        "question": "Emotional Impact",
+        "scale": [1, 2, 3, 4, 5]
+      }
+    ],
+    "multipleQuestion": {
+      "question": "Who do you think created this design?",
+      "required": true,
+      "options": [
+        "Human",
+        "AI",
+        "Human+AI",
+        "Not Sure"
+      ]
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": 2,
+    "question": "What do you think of this image?",
+    "image": "/img/16.png",
+    "starQuestions": [
+      {
+        "id": "SQ1",
+        "question": "Creativity",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ2",
+        "question": "Aesthetic Appeal",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ3",
+        "question": "Professionalism",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ4",
+        "question": "Trustworthiness",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ5",
+        "question": "Emotional Impact",
+        "scale": [1, 2, 3, 4, 5]
+      }
+    ],
+    "multipleQuestion": {
+      "question": "Who do you think created this design?",
+      "required": true,
+      "options": [
+        "Human",
+        "AI",
+        "Human+AI",
+        "Not Sure"
+      ]
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": 3,
+    "question": "What do you think of this image?",
+    "image": "/img/3_poster.png",
+    "starQuestions": [
+      {
+        "id": "SQ1",
+        "question": "Creativity",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ2",
+        "question": "Aesthetic Appeal",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ3",
+        "question": "Professionalism",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ4",
+        "question": "Trustworthiness",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ5",
+        "question": "Emotional Impact",
+        "scale": [1, 2, 3, 4, 5]
+      }
+    ],
+    "multipleQuestion": {
+      "question": "Who do you think created this design?",
+      "required": true,
+      "options": [
+        "Human",
+        "AI",
+        "Human+AI",
+        "Not Sure"
+      ]
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": 4,
+    "question": "What do you think of this image?",
+    "image": "/img/0_australia_0.png",
+    "starQuestions": [
+      {
+        "id": "SQ1",
+        "question": "Creativity",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ2",
+        "question": "Aesthetic Appeal",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ3",
+        "question": "Professionalism",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ4",
+        "question": "Trustworthiness",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ5",
+        "question": "Emotional Impact",
+        "scale": [1, 2, 3, 4, 5]
+      }
+    ],
+    "multipleQuestion": {
+      "question": "Who do you think created this design?",
+      "required": true,
+      "options": [
+        "Human",
+        "AI",
+        "Human+AI",
+        "Not Sure"
+      ]
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": 5,
+    "question": "What do you think of this image?",
+    "image": "/img/freepik__35mm-film-photography-cinematic-studyabroad-themed__23861.png",
+    "starQuestions": [
+      {
+        "id": "SQ1",
+        "question": "Creativity",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ2",
+        "question": "Aesthetic Appeal",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ3",
+        "question": "Professionalism",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ4",
+        "question": "Trustworthiness",
+        "scale": [1, 2, 3, 4, 5]
+      },
+      {
+        "id": "SQ5",
+        "question": "Emotional Impact",
+        "scale": [1, 2, 3, 4, 5]
+      }
+    ],
+    "multipleQuestion": {
+      "question": "Who do you think created this design?",
+      "required": true,
+      "options": [
+        "Human",
+        "AI",
+        "Human+AI",
+        "Not Sure"
+      ]
+    },
+    "correctAnswer": "E"
+  }
+]
