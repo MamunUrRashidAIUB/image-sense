@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+:root {
+	--bg-1: #fbf7ef;
+	--bg-2: #d9ecff;
+	--bg-3: #f7ded4;
+	--ink-1: #1f2937;
+	--ink-2: #475569;
+	--accent-1: #0f766e;
+	--accent-2: #0369a1;
+	--card: rgba(255, 255, 255, 0.78);
+	--card-border: rgba(255, 255, 255, 0.55);
+}
+
 @layer base {
 	*,
 	*::before,
@@ -11,5 +23,82 @@
 	body {
 		margin: 0;
 		padding: 0;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-family: var(--font-sora), "Segoe UI", sans-serif;
+		color: var(--ink-1);
+		background:
+			radial-gradient(circle at 8% 14%, var(--bg-2) 0%, transparent 35%),
+			radial-gradient(circle at 88% 18%, var(--bg-3) 0%, transparent 34%),
+			radial-gradient(circle at 52% 86%, #d9f3e8 0%, transparent 38%),
+			linear-gradient(140deg, #f6f8ff 0%, var(--bg-1) 55%, #f5f9ff 100%);
+		background-attachment: fixed;
+	}
+
+	@media (max-width: 768px) {
+		body {
+			background-attachment: scroll;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: var(--font-fraunces), Georgia, serif;
+		letter-spacing: -0.02em;
+	}
+
+	::selection {
+		background: #99f6e4;
+		color: #0f172a;
+	}
+}
+
+@layer components {
+	.app-root::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		pointer-events: none;
+		z-index: -1;
+		opacity: 0.2;
+		background-image:
+			repeating-linear-gradient(
+				45deg,
+				rgba(148, 163, 184, 0.06) 0,
+				rgba(148, 163, 184, 0.06) 1px,
+				transparent 1px,
+				transparent 12px
+			);
+	}
+
+	.glass-panel {
+		background: var(--card);
+		backdrop-filter: blur(14px);
+		border: 1px solid var(--card-border);
+		box-shadow:
+			0 10px 30px rgba(15, 23, 42, 0.08),
+			0 2px 8px rgba(15, 23, 42, 0.06);
+	}
+
+	.fade-rise {
+		animation: fade-rise 0.65s ease-out both;
+	}
+}
+
+@keyframes fade-rise {
+	from {
+		opacity: 0;
+		transform: translateY(12px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }

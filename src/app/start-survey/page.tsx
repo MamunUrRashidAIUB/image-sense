@@ -263,7 +263,7 @@ export default function StartSurveyPage() {
 
   if (!currentSurvey) {
     return (
-      <section className="mx-auto w-full max-w-3xl rounded-2xl border border-red-200 bg-red-50 p-5 text-left text-red-700">
+      <section className="glass-panel fade-rise mx-auto w-full max-w-3xl rounded-3xl p-5 text-left text-red-700">
         No survey data found.
       </section>
     );
@@ -330,21 +330,21 @@ export default function StartSurveyPage() {
 
   if (isComplete) {
     return (
-      <section className="mx-auto w-full max-w-3xl rounded-3xl border border-emerald-200 bg-emerald-50 p-8 text-center">
+      <section className="glass-panel fade-rise mx-auto w-full max-w-3xl rounded-4xl p-5 text-center sm:p-8">
         <div className="mb-4 flex justify-end">
           <Link
             href="/"
-            className="rounded-xl border border-emerald-300 bg-white px-4 py-2 text-sm font-semibold text-emerald-700 transition hover:border-emerald-400 hover:text-emerald-800"
+            className="rounded-xl border border-cyan-300/80 bg-white/80 px-4 py-2 text-sm font-semibold text-cyan-800 transition hover:-translate-y-0.5 hover:border-cyan-500"
           >
             Home
           </Link>
         </div>
-        <h2 className="text-2xl font-bold text-emerald-700">Survey Completed</h2>
-        <p className="mt-2 text-emerald-700">Thank you. Your responses have been recorded.</p>
+        <h2 className="text-2xl font-bold text-teal-800 sm:text-3xl">Survey Completed</h2>
+        <p className="mt-2 text-slate-600">Thank you. Your responses have been recorded.</p>
         {similarityResult ? (
-          <div className="mx-auto mt-6 max-w-md rounded-2xl border border-emerald-200 bg-white p-5 text-left">
+          <div className="mx-auto mt-6 max-w-md rounded-3xl border border-cyan-100 bg-white/90 p-4 text-left shadow-[0_12px_28px_rgba(8,145,178,0.16)] sm:p-5">
             <h3 className="text-lg font-semibold text-slate-800">Perceptual Alignment Result</h3>
-            <p className="mt-2 text-3xl font-bold text-emerald-700">
+            <p className="mt-2 bg-linear-to-r from-teal-700 to-sky-700 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl">
               {similarityResult.similarityPercentage.toFixed(2)}%
             </p>
             <p className="mt-2 text-sm text-slate-600">{similarityResult.interpretation}</p>
@@ -355,27 +355,27 @@ export default function StartSurveyPage() {
   }
 
   return (
-    <section className="mx-auto w-full max-w-4xl rounded-3xl border border-slate-200 bg-white p-5 text-left shadow-xl sm:p-8">
+    <section className="glass-panel fade-rise mx-auto w-full max-w-5xl rounded-4xl p-5 text-left sm:p-8">
       <div className="mb-4 flex justify-end">
         <Link
           href="/"
-          className="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-300 hover:text-blue-700"
+          className="rounded-xl border border-cyan-300/80 bg-white/80 px-4 py-2 text-sm font-semibold text-cyan-800 transition hover:-translate-y-0.5 hover:border-cyan-500"
         >
           Home
         </Link>
       </div>
       <header className="mb-6">
-        <p className="text-sm font-medium uppercase tracking-wide text-slate-500">
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-teal-700/80 sm:text-sm">
           Question {currentIndex + 1} of {surveys.length}
         </p>
-        <h1 className="mt-2 text-2xl font-bold text-slate-800">{currentSurvey.question}</h1>
+        <h1 className="mt-2 text-2xl font-bold text-slate-800 sm:text-4xl">{currentSurvey.question}</h1>
       </header>
 
-      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 p-2">
+      <div className="overflow-hidden rounded-3xl border border-white/70 bg-white/60 p-2 shadow-[0_8px_18px_rgba(15,23,42,0.1)]">
         <img
           src={currentSurvey.image}
           alt={`Survey visual ${currentSurvey.id}`}
-          className="h-auto max-h-96 w-full rounded-xl object-contain"
+          className="h-auto max-h-72 w-full rounded-xl object-contain sm:max-h-96"
         />
       </div>
 
@@ -384,8 +384,8 @@ export default function StartSurveyPage() {
           const selected = currentAnswer.starRatings[sq.id];
 
           return (
-            <div key={sq.id} className="rounded-2xl border border-slate-200 p-4">
-              <p className="mb-3 text-base font-semibold text-slate-700">{sq.question}</p>
+            <div key={sq.id} className="rounded-3xl border border-cyan-100/80 bg-white/70 p-3 shadow-[0_8px_16px_rgba(2,132,199,0.08)] sm:p-4">
+              <p className="mb-3 text-base font-semibold text-slate-800 sm:text-lg">{sq.question}</p>
               <div className="flex flex-wrap items-center gap-2">
                 {sq.scale.map((value) => {
                   const active = (selected ?? 0) >= value;
@@ -397,10 +397,10 @@ export default function StartSurveyPage() {
                       onClick={() => updateStarRating(sq.id, value)}
                       aria-label={`${value} star${value > 1 ? "s" : ""}`}
                       title={`${value} star${value > 1 ? "s" : ""}`}
-                      className={`rounded-lg border px-3 py-2 text-2xl leading-none transition ${
+                      className={`rounded-xl border px-2.5 py-1.5 text-xl leading-none transition duration-200 sm:px-3 sm:py-2 sm:text-2xl ${
                         active
-                          ? "border-amber-300 bg-amber-50 text-amber-500"
-                          : "border-slate-300 bg-white text-slate-300 hover:border-amber-300 hover:text-amber-400"
+                          ? "border-amber-300 bg-amber-50 text-amber-500 shadow-[0_4px_12px_rgba(251,191,36,0.32)]"
+                          : "border-slate-200 bg-white text-slate-300 hover:-translate-y-0.5 hover:border-amber-300 hover:text-amber-400"
                       }`}
                     >
                       ★
@@ -416,13 +416,13 @@ export default function StartSurveyPage() {
         })}
       </div>
 
-      <div className="mt-6 rounded-2xl border border-slate-200 p-4">
-        <p className="mb-3 text-base font-semibold text-slate-700">{currentSurvey.multipleQuestion.question}</p>
-        <div className="grid gap-2 sm:grid-cols-2">
+      <div className="mt-6 rounded-3xl border border-cyan-100/80 bg-white/70 p-4 shadow-[0_8px_16px_rgba(2,132,199,0.08)]">
+        <p className="mb-3 text-base font-semibold text-slate-800 sm:text-lg">{currentSurvey.multipleQuestion.question}</p>
+        <div className="grid gap-2 md:grid-cols-2">
           {currentSurvey.multipleQuestion.options.map((option) => (
             <label
               key={option}
-              className="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-200 px-3 py-2 hover:border-blue-300"
+              className="flex cursor-pointer items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 transition hover:-translate-y-0.5 hover:border-cyan-300 hover:shadow-[0_6px_12px_rgba(2,132,199,0.12)]"
             >
               <input
                 type="radio"
@@ -437,12 +437,12 @@ export default function StartSurveyPage() {
         </div>
       </div>
 
-      <footer className="mt-8 flex items-center justify-between gap-3">
+      <footer className="mt-8 flex flex-col-reverse items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="button"
           onClick={handlePrevious}
           disabled={currentIndex === 0}
-          className="rounded-xl border border-slate-300 px-4 py-2 font-semibold text-slate-700 disabled:cursor-not-allowed disabled:opacity-50"
+          className="w-full rounded-xl border border-slate-300 bg-white/80 px-4 py-2 font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-slate-400 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
         >
           Previous
         </button>
@@ -451,7 +451,7 @@ export default function StartSurveyPage() {
           type="button"
           onClick={handleNext}
           disabled={!canContinue}
-          className="rounded-xl bg-blue-600 px-5 py-2 font-semibold text-white disabled:cursor-not-allowed disabled:bg-blue-300"
+          className="w-full rounded-xl bg-linear-to-r from-teal-600 to-sky-600 px-5 py-2 font-semibold text-white shadow-[0_10px_18px_rgba(2,132,199,0.26)] transition hover:-translate-y-0.5 hover:from-teal-700 hover:to-sky-700 disabled:cursor-not-allowed disabled:from-sky-300 disabled:to-sky-300 sm:w-auto"
         >
           {currentIndex === surveys.length - 1 ? "Submit" : "Next"}
         </button>

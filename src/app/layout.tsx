@@ -1,7 +1,20 @@
 
 import "./globals.css";
 import type { Metadata } from "next";
+import { Sora, Fraunces } from "next/font/google";
 import AppShell from "@/components/layout/AppShell";
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Image Perception Survey",
@@ -15,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[radial-gradient(circle_at_20%_20%,#e8f1ff_0%,#f5f7fb_40%,#edf1f8_100%)] text-slate-800">
+      <body className={`${sora.variable} ${fraunces.variable} app-root min-h-screen text-slate-800`}>
         <AppShell>{children}</AppShell>
       </body>
     </html>
