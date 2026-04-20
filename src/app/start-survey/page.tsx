@@ -91,7 +91,6 @@ const getAllQuestionKeys = () => {
       keys.push(getRatingKey(survey.id, starQuestion.id));
     }
   }
-
   return keys;
 };
 

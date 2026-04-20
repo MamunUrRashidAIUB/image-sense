@@ -10,7 +10,8 @@ type AppShellProps = {
 
 export default function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
-  const hideNavbar = pathname.startsWith("/start-survey");
+  const hideNavbar =
+    pathname.startsWith("/start-survey") || pathname.startsWith("/view-guideline");
 
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-start px-3 py-4 sm:px-4 sm:py-6">
